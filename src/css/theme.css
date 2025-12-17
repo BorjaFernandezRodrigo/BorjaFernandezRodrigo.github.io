@@ -9,6 +9,8 @@
   --color-surface-dark: #1a2c22;
   --color-white-light: white;
   --color-white-dark: #d1d5db;
+  --color-dark-dark: black;
+  --color-dark-light: #1f2937;
   --color-blue: #3b82f6;
   --color-red: #ef4444;
   --color-grey: #9ca3af;
@@ -34,4 +36,12 @@
   --background-grid-pattern:
     linear-gradient(rgba(48, 232, 122, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(48, 232, 122, 0.05) 1px, transparent 1px);
+
+  --scanlines: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 5px,
+    transparent 1px
+  );
 }

@@ -1,14 +1,14 @@
 .navbar__nav-link {
-  @apply flex items-center gap-4 px-4 py-3 rounded-xl no-underline transition-all duration-300 ease-in-out hover:bg-primary/20 hover:scale-[1.1];
+  @apply flex items-center gap-4 px-4 py-3 rounded-xl  overflow-hidden whitespace-nowrap;
 }
 
 .navbar__nav-link:hover {
-  @apply bg-white/5;
+  @apply bg-gray-100 dark:bg-white/5 transition-all translate-x-1;
   transform: translateX(4px);
 }
 
 .navbar__nav-icon {
-  @apply text-2xl text-white-dark;
+  @apply text-white-dark transition-colors;
   transition: color 0.3s ease;
 }
 
@@ -17,10 +17,10 @@
 }
 
 .navbar__nav-text {
-  @apply text-base text-white-dark font-medium;
+  @apply text-gray-600 dark:text-gray-300 font-medium;
   transition: color 0.3s ease;
 }
 
 .navbar__nav-link:hover .navbar__nav-text {
-  @apply text-white-light;
+  @apply dark:text-white-light text-dark-light;
 }

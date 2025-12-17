@@ -1,9 +1,9 @@
 .navbar-profile {
-  @apply flex items-center gap-2 p-1 rounded-xl bg-white/5 border border-white/5;
+  @apply flex items-center p-1 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/5 transition-colors justify-around overflow-hidden min-h-[72px];
 }
 
 .navbar-profile__avatar {
-  @apply bg-center bg-no-repeat bg-cover rounded-full w-14 h-14 min-w-12 border-2 border-primary;
+  @apply bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 ring-2 ring-primary ring-offset-2 ring-offset-white dark:ring-offset-[#112117] flex-shrink-0 w-15 h-15 min-w-12 border-2 border-primary;
   background-image: url('img/avatar.png');
   box-shadow:
     0 0 0 2px var(--primary-color),
@@ -15,11 +15,11 @@
 }
 
 .navbar-profile__info {
-  @apply flex flex-col gap-2;
+  @apply text-slate-800 dark:text-white text-lg font-bold leading-tight;
 }
 
 .navbar-profile__title {
-  @apply text-white text-base font-bold leading-tight;
+  @apply dark:text-white text-black text-base font-bold leading-tight;
 }
 
 .navbar-profile__status {
