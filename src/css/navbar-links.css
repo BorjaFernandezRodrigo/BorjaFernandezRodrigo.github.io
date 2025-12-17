@@ -1,0 +1,26 @@
+.navbar__nav-link {
+  @apply flex items-center gap-4 px-4 py-3 rounded-xl no-underline transition-all duration-300 ease-in-out hover:bg-primary/20 hover:scale-[1.1];
+}
+
+.navbar__nav-link:hover {
+  @apply bg-white/5;
+  transform: translateX(4px);
+}
+
+.navbar__nav-icon {
+  @apply text-2xl text-white-dark;
+  transition: color 0.3s ease;
+}
+
+.navbar__nav-link:hover .navbar__nav-icon {
+  @apply text-primary;
+}
+
+.navbar__nav-text {
+  @apply text-base text-white-dark font-medium;
+  transition: color 0.3s ease;
+}
+
+.navbar__nav-link:hover .navbar__nav-text {
+  @apply text-white-light;
+}
