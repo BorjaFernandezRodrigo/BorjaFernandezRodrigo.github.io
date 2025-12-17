@@ -1,0 +1,23 @@
+.button-locale {
+  @apply flex items-center justify-between;
+}
+
+.button-locale__container {
+  @apply flex items-center gap-2 bg-gray-100 dark:bg-black/20 p-1.5 rounded-lg border border-gray-200 dark:border-white/5;
+}
+
+.button-locale__separator {
+  @apply w-px h-3 bg-gray-300 dark:bg-white/10;
+}
+
+.button-locale__btn {
+  @apply text-xs px-2 py-0.5 rounded-xl hover:bg-white dark:hover:bg-white/10 transition-colors;
+}
+
+.button-locale__btn--active {
+  @apply font-bold text-primary;
+}
+
+.button-locale__btn--inactive {
+  @apply font-medium text-gray-400;
+}
