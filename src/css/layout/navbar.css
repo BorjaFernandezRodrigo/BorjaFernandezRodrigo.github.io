@@ -1,0 +1,28 @@
+.navbar {
+  @apply z-10 w-full md:w-80 flex-shrink-0 bg-white/80 dark:bg-surface-dark/90 backdrop-blur-md border-r border-gray-200 dark:border-white/5 flex flex-col justify-between p-6 order-2 md:order-1 h-auto md:h-full overflow-y-auto transition-colors duration-300 relative;
+}
+
+.navbar__content {
+  @apply flex flex-col flex-1 gap-6;
+}
+
+.navbar__nav {
+  @apply flex flex-col gap-2;
+}
+
+.navbar__footer {
+  @apply flex flex-col gap-2 mt-6 pt-5 border-t border-black/10 dark:border-white/10 transition-colors duration-300;
+}
+
+.navbar__bottoms {
+  @apply flex flex-row gap-4 mt-6 justify-between;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    @apply w-[320px] h-full order-1;
+  }
+  .navbar__footer {
+    @apply flex;
+  }
+}

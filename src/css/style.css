@@ -1,21 +1,23 @@
-@import './animations.css';
-@import './navbar-links.css';
-@import './navbar-profile.css';
-@import './navbar-console.css';
-@import './navbar.css';
-@import './layout.css';
 @import './theme.css';
-@import './button-locale.css';
-@import './button-theme.css';
+@import './animations.css';
+
+@import './layout/layout.css';
+@import './layout/navbar.css';
+
+@import './components/navbar-links.css';
+@import './components/navbar-profile.css';
+@import './components/navbar-console.css';
+@import './components/button-locale.css';
+@import './components/button-theme.css';
 
 html,
 body {
-  @apply m-0 p-0 font-sans;
+  @apply m-0 p-0 font-sans transition-colors duration-400;
 }
 
 body {
   @apply h-screen overflow-hidden flex flex-col md:flex-row relative
-        bg-background-light dark:bg-background-dark;
+        bg-background-light dark:bg-background-dark transition-colors duration-400;
 }
 
 .material-symbols-outlined {

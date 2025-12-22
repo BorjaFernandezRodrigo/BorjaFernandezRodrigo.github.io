@@ -1,5 +1,3 @@
-@import './animations.css';
-
 .console__minimized {
   @apply !h-14 !shadow-md;
 }

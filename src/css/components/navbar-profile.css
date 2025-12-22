@@ -4,7 +4,7 @@
 
 .navbar-profile__avatar {
   @apply bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 ring-2 ring-primary ring-offset-2 ring-offset-white dark:ring-offset-[#112117] flex-shrink-0 w-15 h-15 min-w-12 border-2 border-primary;
-  background-image: url('img/avatar.png');
+  background-image: url('/img/avatar.png');
   box-shadow:
     0 0 0 2px var(--primary-color),
     0 0 0 4px #112117;
