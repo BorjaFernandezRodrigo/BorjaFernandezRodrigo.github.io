@@ -111,15 +111,15 @@ export class TechStack {
     const filteredTechs = this.filterTechnologies()
 
     return `
-      <div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="mb-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <div>
           <h2 class="text-white text-2xl font-bold mb-2" data-i18n="tech.title">${this.i18n.t('tech.title')}</h2>
           <div class="h-1 w-20 bg-primary/50 rounded-full"></div>
         </div>
         
         <!-- Category Filter Badges -->
-        <div class="tech-filter-container">
-          <div class="tech-filter-badges">
+        <div class="tech-filter-container sm:items-end pt-2">
+          <div class="tech-filter-badges justify-start sm:justify-end">
             ${this.categories.map((cat) => this.renderBadge(cat)).join('')}
           </div>
         </div>

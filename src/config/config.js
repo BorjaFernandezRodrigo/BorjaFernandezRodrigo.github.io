@@ -2,6 +2,8 @@
 // Configuration File
 // -------------------------------------------------------
 
+import { TECHNOLOGIES } from './technologies.js'
+
 // Menu
 const MENU_ITEMS = [
   { key: 'nav.home', icon: 'home', href: '#' },
@@ -14,8 +16,33 @@ const MENU_ITEMS = [
 const DEFAULT_LANGUAGE = 'es'
 const SUPPORTED_LANGUAGES = ['es', 'en']
 
+// Stats Data
+export const STATS = [
+  {
+    key: 'stats.experience.title',
+    icon: 'military_tech',
+    value: 'data.experience',
+    percentage: 'data.experiencePercentage' || 85,
+    label: 'Senior Level',
+  },
+  {
+    key: 'stats.profile.title',
+    icon: 'code',
+    value: 'data.profile' || 'Full-Stack Architect',
+    description: 'Especialidad: Sistemas escalables',
+  },
+  {
+    key: 'stats.productivity.title',
+    icon: 'local_cafe',
+    value: '100%',
+    label: 'ALTO RENDIMIENTO',
+  },
+]
+
 export const config = {
   menuItems: MENU_ITEMS,
   defaultLanguage: DEFAULT_LANGUAGE,
   supportedLanguages: SUPPORTED_LANGUAGES,
+  stats: STATS,
+  technologies: TECHNOLOGIES,
 }
