@@ -1,0 +1,35 @@
+.header {
+  @apply w-full;
+}
+
+.header__tile {
+  @apply relative overflow-hidden rounded-xl flex border border-gray-200 dark:border-white/10 shadow-lg h-[240px];
+}
+
+.header__title-bg {
+  @apply absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105;
+}
+
+.header__title-content {
+  @apply px-10 py-5 flex flex-col justify-end items-start w-full h-full;
+}
+
+.header__title-label {
+  @apply bg-primary/20 text-primary px-2 py-1 rounded text-xs font-bold tracking-wider border border-primary/20 backdrop-blur-sm;
+}
+
+.header__title-text {
+  @apply text-white text-3xl md:text-5xl font-bold leading-tight tracking-tight drop-shadow-md;
+}
+
+.header__description {
+  @apply space-y-4 w-full flex flex-col justify-center items-start mt-25;
+}
+
+.header__description-title {
+  @apply text-slate-800 dark:text-white tracking-tight text-3xl font-bold leading-tight;
+}
+
+.header__description-text {
+  @apply text-slate-600 dark:text-gray-300 text-lg leading-relaxed border-l-4 border-primary/30 pl-4 font-medium;
+}

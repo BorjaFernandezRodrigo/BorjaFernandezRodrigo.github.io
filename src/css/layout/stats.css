@@ -1,0 +1,59 @@
+.stats-card {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-4;
+}
+
+.stats-card__experience {
+  @apply mb-1;
+}
+
+.stats-card__value {
+  @apply text-slate-800 dark:text-white text-4xl font-bold tracking-tight mb-1;
+}
+
+.stats-card__progress {
+  @apply w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+}
+
+.stats-card__progress-bar {
+  @apply h-full bg-primary rounded-full w-[85%];
+  box-shadow: 0 0 10px rgba(48, 232, 122, 0.5);
+}
+
+.stats-card__label {
+  @apply text-right text-xs text-primary/80 dark:text-primary/70 mt-1 font-bold;
+}
+
+.stats-card__profile-value {
+  @apply text-slate-800 dark:text-white text-3xl font-bold tracking-tight;
+}
+
+.stats-card__profile-label {
+  @apply text-gray-500 dark:text-gray-400 text-sm mt-1;
+}
+
+.stats-card__productivity {
+  @apply flex flex-col gap-2 w-full;
+}
+
+.stats-card__productivity-header {
+  @apply flex justify-between items-end;
+}
+
+.stats-card__productivity-value {
+  @apply dark:text-white text-3xl font-bold tracking-tight text-primary;
+  filter: drop-shadow(0 0 5px rgba(48, 232, 122, 0.5));
+}
+
+.stats-card__productivity-label {
+  @apply text-[10px] font-mono text-primary/80 dark:text-primary/60 tracking-widest font-bold;
+}
+
+.stats-card__bars {
+  @apply flex gap-1 h-3;
+}
+
+.stats-card__bar {
+  @apply flex-1 bg-primary rounded-sm;
+  transform: skewX(-12deg);
+  box-shadow: 0 0 4px rgba(48, 232, 122, 0.4);
+}
