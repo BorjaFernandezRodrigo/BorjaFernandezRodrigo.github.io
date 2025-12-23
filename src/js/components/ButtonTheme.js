@@ -6,8 +6,8 @@ export class ButtonTheme {
     this.currentLanguage = i18n.locale
   }
 
-  onCLickThemeButton() {
-    this.theme.toogleTheme()
+  onClickThemeButton() {
+    this.theme.toggleTheme()
     this.updateThemeButtonStyles()
   }
 
@@ -35,6 +35,6 @@ export class ButtonTheme {
   attachEventListeners() {
     const themeToggle = document.getElementById('theme-toggle')
     if (themeToggle)
-      themeToggle.addEventListener('click', () => this.onCLickThemeButton())
+      themeToggle.addEventListener('click', () => this.onClickThemeButton())
   }
 }

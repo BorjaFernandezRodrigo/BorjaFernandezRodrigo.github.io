@@ -1,8 +1,8 @@
-import { NavbarProfile } from './navbarprofile.js'
-import { NavbarConsole } from './navbarconsole.js'
-import { NavbarLinks } from './NavbarLinks.js'
-import { ButtonLocale } from '../ButtonLocale.js'
-import { ButtonTheme } from '../ButtonTheme.js'
+import { NavbarProfile } from '../components/navbar/NavbarProfile.js'
+import { NavbarConsole } from '../components/navbar/NavbarConsole.js'
+import { NavbarLinks } from '../components/navbar/NavbarLinks.js'
+import { ButtonLocale } from '../components/ButtonLocale.js'
+import { ButtonTheme } from '../components/ButtonTheme.js'
 
 export class Navbar {
   constructor(i18n, theme, menuItems) {

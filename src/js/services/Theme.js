@@ -3,7 +3,7 @@ export class Theme {
     document.documentElement.classList.add('dark')
   }
 
-  toogleTheme() {
+  toggleTheme() {
     const html = document.documentElement
     if (html.classList.contains('dark')) {
       html.classList.remove('dark')
