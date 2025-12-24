@@ -1,0 +1,229 @@
+/* Projects Section */
+.projects {
+  @apply space-y-8;
+}
+
+.projects__header {
+  @apply flex items-center justify-between mb-4 sticky top-0 z-10 bg-linear-to-b from-transparent to-transparent backdrop-blur-xs;
+}
+
+.projects__header-content {
+  @apply flex items-center gap-3;
+}
+
+.projects__icon {
+  @apply text-primary text-[1.875rem] leading-none;
+}
+
+.projects__title {
+  @apply text-2xl font-bold text-slate-700 dark:text-white;
+}
+
+.projects__link {
+  @apply text-xs font-mono text-primary transition-colors duration-200 hover:text-slate-700 dark:hover:text-white;
+}
+
+/* Projects Container */
+.projects__container {
+  @apply grid gap-6 overflow-auto p-4 h-[50rem] max-h-[800px];
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .projects__container {
+    @apply grid-cols-2;
+  }
+}
+
+/* Project Card */
+.project-card {
+  @apply relative overflow-hidden rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 transition-all duration-300 ease-out shadow-sm hover:border-emerald-400/40;
+}
+
+/* Project Card Image */
+.project-card__image {
+  @apply aspect-video w-full bg-cover bg-center overflow-hidden transition-all duration-500 ease-out;
+}
+
+.project-card:hover .project-card__image {
+  @apply opacity-90 scale-[1.01];
+}
+
+/* Project Card Image Background Styles */
+.project-card__image--js {
+  background: linear-gradient(135deg, #00ff88 0%, #003322 35%, #00110c 100%);
+}
+
+.project-card__image--ts {
+  background: linear-gradient(135deg, #00d1ff 0%, #00304f 40%, #010915 100%);
+}
+
+.project-card__image--python {
+  background: linear-gradient(135deg, #ff1be6 0%, #330046 45%, #0a0015 100%);
+}
+
+.project-card__image--java {
+  background: linear-gradient(135deg, #ff005d 0%, #2c0014 45%, #08000b 100%);
+}
+
+.project-card__image--csharp {
+  background: linear-gradient(135deg, #00ff5f 0%, #004021 40%, #00140c 100%);
+}
+
+.project-card__image--php {
+  background: linear-gradient(135deg, #c400ff 0%, #2a0044 45%, #0a0015 100%);
+}
+
+.project-card__image--ruby {
+  background: linear-gradient(135deg, #ff3b1f 0%, #2b0a00 40%, #0d0300 100%);
+}
+
+.project-card__image--go {
+  background: linear-gradient(135deg, #12fff7 0%, #00484a 40%, #001414 100%);
+}
+
+.project-card__image--rust {
+  background: linear-gradient(135deg, #ff5572 0%, #2a000f 45%, #0a0008 100%);
+}
+
+.project-card__image--html {
+  background: linear-gradient(135deg, #ffd600 0%, #3a2a00 45%, #0e0a00 100%);
+}
+
+.project-card__image--css {
+  background: linear-gradient(135deg, #2bb0ff 0%, #0c2f66 45%, #020913 100%);
+}
+
+.project-card__image--default {
+  background: linear-gradient(135deg, #00ff88 0%, #00331f 40%, #00100b 100%);
+}
+
+/* Project Card Image Overlay */
+.project-card__overlay {
+  @apply absolute inset-0 bg-linear-to-b from-transparent to-black/60 transition-all duration-500 ease-out;
+}
+
+.project-card:hover .project-card__overlay {
+  @apply bg-linear-to-b from-transparent to-black/40;
+}
+
+/* Project Card Image Grid Pattern */
+.project-card__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 16px
+    );
+  background-blend-mode: soft-light, soft-light;
+  pointer-events: none;
+}
+
+/* Project Card Image Glow Effects */
+.project-card__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(0, 255, 136, 0.12),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(255, 0, 149, 0.16),
+      transparent 50%
+    ),
+    radial-gradient(circle at 60% 80%, rgba(0, 255, 255, 0.12), transparent 50%);
+  background-blend-mode: screen, screen, screen;
+  pointer-events: none;
+}
+
+/* Project Card Language Badge */
+.project-card__language {
+  @apply absolute right-5 top-3 px-3 py-1 text-xs font-bold text-white/50 transition-all duration-200;
+}
+
+.project-card:hover .project-card__language {
+  @apply text-white;
+}
+
+/* Project Card Content */
+.project-card__content {
+  @apply absolute bottom-0 left-0 w-full p-6 bg-linear-to-t from-black to-transparent;
+}
+
+/* Project Card Info */
+.project-card__info {
+  @apply flex justify-between items-end gap-3;
+}
+
+/* Project Card Details */
+.project-card__details {
+  @apply flex-1 min-w-0;
+}
+
+.project-card__name {
+  @apply text-xl font-bold text-white mb-1 overflow-hidden text-ellipsis whitespace-nowrap transition-colors duration-200;
+}
+
+.project-card:hover .project-card__name {
+  @apply text-primary;
+}
+
+.project-card__description {
+  @apply text-gray-300 text-sm line-clamp-2;
+}
+
+/* Project Card Metadata */
+.project-card__metadata {
+  @apply flex gap-2 mt-2;
+}
+
+.project-card__meta-item {
+  @apply text-xs flex items-center gap-1;
+}
+
+.project-card__meta-stars {
+  @apply text-amber-400;
+}
+
+.project-card__meta-language {
+  @apply text-gray-400;
+}
+
+/* Project Card Link Button */
+.project-card__button {
+  @apply flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm shrink-0 transition-all duration-200 cursor-pointer hover:bg-primary hover:text-black;
+}
+
+.project-card__button-icon {
+  @apply text-white transition-colors duration-200;
+}
+
+.project-card:hover .project-card__button-icon {
+  @apply text-primary;
+}
+
+/* Loading State */
+.projects__loading {
+  @apply text-center text-gray-400;
+}
+
+/* Empty State */
+.projects__empty {
+  @apply text-center text-gray-400;
+}

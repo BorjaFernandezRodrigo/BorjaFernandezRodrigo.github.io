@@ -1,39 +1,61 @@
+import { ProjectCardComponent } from '../components/ProjectCard'
+
 export class Projects {
-  constructor() {
-    this.projects = [
-      {
-        title: 'Dashboard Analytics',
-        description: 'React • D3.js • Firebase',
-        image: 'https://...',
-      },
-      {
-        title: 'E-Commerce API',
-        description: 'Node.js • Express • MongoDB',
-        image: 'https://...',
-      },
-    ]
+  constructor(i18n, projectsService) {
+    this.i18n = i18n
+    this.projectsService = projectsService
+    this.projects = []
+    this.isLoading = true
+  }
+
+  async loadProjects() {
+    try {
+      this.projects = await this.projectsService.getPublicProjects()
+    } catch (error) {
+      console.error('Error loading projects:', error)
+      this.projects = []
+    }
+    this.isLoading = false
+  }
+
+  renderContent() {
+    if (this.isLoading) {
+      return /* html */ `
+        <div class="projects__loading" data-i18n="projects.loading">
+            <p>${this.i18n.t('projects.loading')}</p>
+        </div>
+      `
+    }
+
+    if (this.projects.length === 0) {
+      return /* html */ `
+        <div class="projects__empty" data-i18n="projects.empty">
+            <p>${this.i18n.t('projects.empty')}</p>
+        </div>
+      `
+    }
+    return /* html */ `
+      <div class="projects__container">
+          ${this.projects.map((project) => new ProjectCardComponent(this.i18n).render(project)).join('')}
+      </div>
+    `
   }
 
   render() {
-    return `
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        ${this.projects
-          .map(
-            (project) => `
-          <div class="group relative overflow-hidden rounded-xl bg-surface-dark border border-white/5">
-            <div class="aspect-video w-full bg-cover bg-center grayscale group-hover:grayscale-0"
-                 style="background-image: url('${project.image}')">
-              <div class="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all"></div>
+    const content = this.renderContent()
+    return /* html */ `
+    <section class="projects">
+        <div class="projects__header">
+            <div class="projects__header-content">
+                <span class="projects__icon material-symbols-outlined">rocket_launch</span>
+                <h3 class="projects__title" data-i18n="projects.title">${this.i18n.t('projects.title')}</h3>
             </div>
-            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black">
-              <h4 class="text-xl font-bold text-white mb-1">${project.title}</h4>
-              <p class="text-gray-400 text-sm">${project.description}</p>
-            </div>
-          </div>
-        `
-          )
-          .join('')}
-      </div>
+            <a href="${this.projectsService.profileUrl}" target="_blank" rel="noopener noreferrer" class="projects__link" data-i18n="projects.viewAll">
+                ${this.i18n.t('projects.viewAll')}
+            </a>
+        </div>
+        ${content}
+    </section>
     `
   }
 }

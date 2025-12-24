@@ -5,13 +5,14 @@
 @import './layout/navbar.css';
 @import './layout/header.css';
 @import './layout/stats.css';
+@import './layout/projects.css';
+@import './layout/tech-stack.css';
 
 @import './components/navbar-links.css';
 @import './components/navbar-profile.css';
 @import './components/navbar-console.css';
 @import './components/button-locale.css';
 @import './components/button-theme.css';
-@import './components/tech-stack.css';
 @import './components/badge.css';
 
 html,
@@ -33,12 +34,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 2px;
+  height: 4px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  @apply bg-background-dark;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-background-dark;
+  @apply bg-background-light;
 }
 
 ::-webkit-scrollbar-thumb {

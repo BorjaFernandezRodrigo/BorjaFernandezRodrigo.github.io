@@ -2,20 +2,20 @@ export const STATS = [
   {
     key: 'stats.experience.title',
     icon: 'military_tech',
-    value: 'data.experience',
-    percentage: 'data.experiencePercentage' || 85,
-    label: 'Senior Level',
+    value: 'stats.experience',
+    percentage: 'stats.experiencePercentage' || 85,
+    label: 'stats.experienceLabel',
   },
   {
     key: 'stats.profile.title',
     icon: 'code',
-    value: 'data.profile' || 'Full-Stack Architect',
-    description: 'Especialidad: Sistemas escalables',
+    value: 'stats.profile' || 'Full-Stack Architect',
+    description: 'stats.profileDescription',
   },
   {
     key: 'stats.productivity.title',
     icon: 'local_cafe',
     value: '100%',
-    label: 'ALTO RENDIMIENTO',
+    label: 'stats.productivity.label',
   },
 ]
