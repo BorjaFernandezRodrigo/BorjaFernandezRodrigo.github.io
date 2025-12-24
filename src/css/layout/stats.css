@@ -1,17 +1,17 @@
 .stats-card {
-  @apply grid grid-cols-1 sm:grid-cols-3 gap-4;
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4 px-1 sm:px-2;
 }
 
 .stats-card__experience {
-  @apply mb-1;
+  @apply mb-0;
 }
 
 .stats-card__value {
-  @apply text-slate-900 dark:text-white text-4xl font-bold tracking-tight mb-1;
+  @apply text-slate-900 dark:text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-0.5 leading-tight;
 }
 
 .stats-card__progress {
-  @apply w-full h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden;
+  @apply w-full h-1 sm:h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden;
 }
 
 .stats-card__progress-bar {
@@ -20,15 +20,15 @@
 }
 
 .stats-card__label {
-  @apply text-right text-xs text-primary/90 dark:text-primary/70 mt-1 font-bold;
+  @apply text-right text-xs sm:text-xs md:text-xs text-primary/90 dark:text-primary/70 mt-1 font-bold;
 }
 
 .stats-card__profile-value {
-  @apply text-slate-900 dark:text-white text-3xl font-bold tracking-tight;
+  @apply text-slate-900 dark:text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight;
 }
 
 .stats-card__profile-label {
-  @apply text-gray-600 dark:text-gray-400 text-sm mt-1;
+  @apply text-gray-600 dark:text-gray-400 text-xs sm:text-xs md:text-sm mt-0.5;
 }
 
 .stats-card__productivity {
@@ -40,16 +40,16 @@
 }
 
 .stats-card__productivity-value {
-  @apply text-3xl font-bold tracking-tight text-primary;
+  @apply text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-primary leading-tight;
   filter: drop-shadow(0 0 5px rgba(48, 232, 122, 0.5));
 }
 
 .stats-card__productivity-label {
-  @apply text-[10px] font-mono text-primary/90 dark:text-primary/60 tracking-widest font-bold;
+  @apply text-[8px] sm:text-[9px] md:text-[10px] font-mono text-primary/90 dark:text-primary/60 tracking-widest font-bold;
 }
 
 .stats-card__bars {
-  @apply flex gap-1 h-3;
+  @apply flex gap-0.5 sm:gap-1 h-2 sm:h-3;
 }
 
 .stats-card__bar {
