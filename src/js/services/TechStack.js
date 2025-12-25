@@ -12,13 +12,15 @@ export class TechStackService {
         categoriesSet.add(tech.category)
       }
     })
-    return ['all', ...Array.from(categoriesSet).sort()]
+    return [
+      'core',
+      ...Array.from(categoriesSet)
+        .sort()
+        .filter((cat) => cat !== 'core'),
+    ]
   }
 
-  filterTechnologies(selectedCategory = 'all') {
-    if (selectedCategory === 'all') {
-      return this.technologies
-    }
+  filterTechnologies(selectedCategory = 'core') {
     return this.technologies.filter((tech) => {
       if (Array.isArray(tech.category)) {
         return tech.category.includes(selectedCategory)

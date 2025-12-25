@@ -3,7 +3,7 @@ import { CardComponent } from '../components/Card'
 
 export class TechStack {
   constructor(i18nService, techStackService) {
-    this.selectedCategory = 'all'
+    this.selectedCategory = 'core'
     this.i18nService = i18nService
     this.techStackService = techStackService
     this.badgeComponent = new Badge(i18nService)

@@ -1,11 +1,18 @@
 export const TECHNOLOGIES = [
   // --- LENGUAJES ---
   {
+    name: 'PL/SQL Oracle',
+    abbr: 'OR',
+    skill: 90,
+    color: 'red',
+    category: ['back', 'lenguaje'],
+  },
+  {
     name: 'TypeScript',
     abbr: 'TS',
     skill: 95,
     color: 'blue-600',
-    category: ['lenguaje', 'front', 'back'],
+    category: ['lenguaje', 'front', 'back', 'core'],
   },
   {
     name: 'JavaScript',
@@ -77,7 +84,7 @@ export const TECHNOLOGIES = [
     abbr: 'NG',
     skill: 95,
     color: 'red',
-    category: ['front', 'framework'],
+    category: ['front', 'framework', 'core'],
   },
   {
     name: 'Angular Material',
@@ -91,14 +98,14 @@ export const TECHNOLOGIES = [
     abbr: 'IO',
     skill: 90,
     color: 'blue',
-    category: ['front', 'framework'],
+    category: ['front', 'framework', 'core'],
   },
   {
     name: 'Electron',
     abbr: 'EL',
     skill: 90,
     color: 'cyan',
-    category: ['front', 'framework'],
+    category: ['front', 'framework', 'core'],
   },
 
   // --- BACKEND ---
@@ -114,7 +121,7 @@ export const TECHNOLOGIES = [
     abbr: 'NS',
     skill: 85,
     color: 'red',
-    category: ['back', 'framework'],
+    category: ['back', 'framework', 'core'],
   },
   {
     name: 'Spring Boot',
@@ -200,7 +207,7 @@ export const TECHNOLOGIES = [
     abbr: 'GL',
     skill: 95,
     color: 'orange',
-    category: ['devop'],
+    category: ['devop', 'core'],
   },
   {
     name: 'Jenkins',
@@ -225,6 +232,13 @@ export const TECHNOLOGIES = [
   },
 
   // --- INFRAESTRUCTURA ---
+  {
+    name: 'Power BI',
+    abbr: 'PB',
+    skill: 85,
+    color: 'yellow',
+    category: ['back'],
+  },
   {
     name: 'Nginx',
     abbr: 'NX',
@@ -279,28 +293,28 @@ export const TECHNOLOGIES = [
   {
     name: 'DDD',
     abbr: 'DD',
-    skill: 90,
+    skill: 95,
     color: 'blue-600',
     category: ['arquitectura'],
   },
   {
     name: 'Hexagonal',
     abbr: 'HX',
-    skill: 95,
+    skill: 100,
     color: 'green',
-    category: ['arquitectura'],
+    category: ['arquitectura', 'core'],
   },
   {
     name: 'TDD',
     abbr: 'TD',
-    skill: 80,
+    skill: 95,
     color: 'red',
     category: ['arquitectura'],
   },
   {
     name: 'SOLID',
     abbr: 'SL',
-    skill: 95,
+    skill: 100,
     color: 'primary',
     category: ['arquitectura'],
   },
@@ -314,7 +328,7 @@ export const TECHNOLOGIES = [
   {
     name: 'Microservices',
     abbr: 'MS',
-    skill: 80,
+    skill: 95,
     color: 'indigo',
     category: ['arquitectura'],
   },
