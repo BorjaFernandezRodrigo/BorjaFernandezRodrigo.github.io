@@ -25,7 +25,7 @@
 
 /* Projects Container */
 .projects__container {
-  @apply grid gap-3 sm:gap-4 md:gap-6 overflow-auto p-3 sm:p-4 h-[45rem] sm:h-[50rem] md:h-[50rem] max-h-[443px] sm:max-h-[700px] md:max-h-[800px];
+  @apply grid gap-3 sm:gap-4 md:gap-6 overflow-auto p-3 sm:p-4 h-[45rem]  max-h-[443px];
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
