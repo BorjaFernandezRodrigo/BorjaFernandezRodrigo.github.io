@@ -1,9 +1,15 @@
 .stats-card {
-  @apply grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4 px-1 sm:px-2;
+  @apply flex flex-row lg:flex-row gap-3 sm:gap-4 md:gap-6 justify-between;
+}
+
+@media (max-width: 1350px) {
+  .stats-card {
+    @apply flex-col;
+  }
 }
 
 .stats-card__experience {
-  @apply mb-0;
+  @apply mb-0 min-w-65;
 }
 
 .stats-card__value {
@@ -11,7 +17,7 @@
 }
 
 .stats-card__progress {
-  @apply w-full h-1 sm:h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden;
+  @apply h-1 sm:h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden;
 }
 
 .stats-card__progress-bar {
@@ -24,7 +30,7 @@
 }
 
 .stats-card__profile-value {
-  @apply text-slate-900 dark:text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight;
+  @apply min-w-65 text-slate-900 dark:text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight;
 }
 
 .stats-card__profile-label {
@@ -32,7 +38,7 @@
 }
 
 .stats-card__productivity {
-  @apply flex flex-col gap-2 w-full;
+  @apply min-w-65 flex flex-col gap-2;
 }
 
 .stats-card__productivity-header {
