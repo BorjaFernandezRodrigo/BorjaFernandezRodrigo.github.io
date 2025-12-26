@@ -33,3 +33,8 @@
 .header__description-text {
   @apply text-slate-600 dark:text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed border-l-4 border-primary/30 pl-3 sm:pl-4 font-medium;
 }
+
+.blinking-cursor {
+  @apply inline-block;
+  animation: blink 1s infinite;
+}

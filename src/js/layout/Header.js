@@ -25,6 +25,7 @@ export class Header {
             <h1 class="header__description-title">
                 <span class="text-primary">&gt;</span>
                 <span data-i18n="hero.subtitle">${this.I18n.t('hero.subtitle')}</span>
+                <span class="blinking-cursor">_</span>
             </h1>
             <p class="header__description-text" data-i18n="hero.description">
                 ${this.I18n.t('hero.description')}
