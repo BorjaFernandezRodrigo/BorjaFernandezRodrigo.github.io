@@ -17,7 +17,7 @@ export class Navbar {
 
   render() {
     return `
-    <button class="navbar__toggle" id="navbar-toggle" aria-label="Abrir menú">
+    <button class="navbar__toggle" id="navbar-toggle" aria-label="Toggle menu">
       <span class="material-symbols-outlined navbar__toggle-icon">menu</span>
     </button>
     <div class="navbar__overlay" id="navbar-overlay"></div>
@@ -49,12 +49,12 @@ export class Navbar {
       navbar.classList.add('navbar--open')
       overlay.classList.add('navbar__overlay--active')
       icon.textContent = 'close'
-      toggle.setAttribute('aria-label', 'Cerrar menú')
+      toggle.setAttribute('aria-label', 'Close menu')
     } else {
       navbar.classList.remove('navbar--open')
       overlay.classList.remove('navbar__overlay--active')
       icon.textContent = 'menu'
-      toggle.setAttribute('aria-label', 'Abrir menú')
+      toggle.setAttribute('aria-label', 'Open menu')
     }
   }
 
@@ -74,6 +74,7 @@ export class Navbar {
     const navLinks = document.querySelectorAll('.navbar__nav a')
 
     toggle?.addEventListener('click', () => this.toggleMenu())
+    overlay?.addEventListener('click', () => this.closeMenu())
 
     navLinks.forEach((link) => {
       link.addEventListener('click', () => this.closeMenu())

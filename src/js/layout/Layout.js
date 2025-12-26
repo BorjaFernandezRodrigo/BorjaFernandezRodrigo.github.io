@@ -12,13 +12,13 @@ export class Layout {
     menuItems = [],
     stats = [],
     techStackService,
-    proyectsService
+    projectsService
   ) {
     this.header = new Header(i18n)
     this.navbar = new Navbar(i18n, theme, menuItems)
     this.stats = new Stats(i18n, stats)
     this.techStack = new TechStack(i18n, techStackService)
-    this.projects = new Projects(i18n, proyectsService)
+    this.projects = new Projects(i18n, projectsService)
     this.career = new Career(i18n)
   }
 

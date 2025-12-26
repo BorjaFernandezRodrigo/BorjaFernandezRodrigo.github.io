@@ -32,7 +32,7 @@
 
   --box-shadow-primary: 0 4px 12px rgba(16, 185, 129, 0.15);
 
-  /* /* BACKGROUND PATTERNS */
+  /* BACKGROUND PATTERNS */
   --background-grid-pattern:
     linear-gradient(rgba(48, 232, 122, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(48, 232, 122, 0.05) 1px, transparent 1px);

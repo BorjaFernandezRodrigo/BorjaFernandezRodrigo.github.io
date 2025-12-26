@@ -19,7 +19,7 @@
 
 .console {
   @apply flex flex-col border-t border-white/10 w-full h-[350px] max-w-[270px]
-  rounded-2xl dark:bg-background-dark/10  bg-background-dark/80 rounded-lg border border-white/5 overflow-hidden;
+  rounded-2xl dark:bg-background-dark/10 bg-background-dark/80 border border-white/5 overflow-hidden;
   transition:
     height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.3s ease;
@@ -76,7 +76,7 @@
 }
 
 .console__input {
-  @apply text-secondary flex-1 bg-transparent outline-none border-none text-white-dark 
+  @apply text-secondary flex-1 bg-transparent border-none text-white-dark 
   text-sm outline-none p-0;
   font-family: 'Courier New', monospace;
 }
